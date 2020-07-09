@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1eacc7;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="Ellipse_2_copy_4" data-name="Ellipse 2 copy 4" cx="13" cy="13" r="13"/>
+  <path id="Rectangle_20_copy_4" data-name="Rectangle 20 copy 4" class="cls-1" d="M12,6h2V20H12V6Zm8,6v2H6V12H20Z"/>
+</svg>
