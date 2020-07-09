@@ -1,0 +1,11 @@
+# Для phpStorm
+.idea
+# Дополнительные расширения
+*.jp?g
+*.png
+*.gif
+*.svg
+*.pdf
+*.xls?
+# Для node modules
+node_modules/
