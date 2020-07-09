@@ -1,0 +1,36 @@
+.feedback{
+  min-height: 900px;
+  padding-bottom: 100px;
+  hr{
+    border-bottom: none;
+    margin: 48px 0 48px 0;
+    background-color: rgb(246, 246, 246);
+  }
+  &__block{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  &__img{
+    width: 169px;
+    height: 169px;
+  }
+  &__description{
+    margin-left: 62px;
+    &__name{
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+    &__merits{
+      font-size: 14px;
+      font-weight: 300;
+      margin: 15px 0 20px 0;
+      color: rgb(100, 100, 100);
+    }
+    &__description{
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+}
