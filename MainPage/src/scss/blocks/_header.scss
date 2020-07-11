@@ -1,0 +1,16 @@
+.menu{
+  border-bottom: white solid 1px;
+  border-top: white solid 1px;
+  max-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__logo{
+    width: 120px;
+    height: 120px;
+  }
+  &__header{
+    margin-right: 25px;
+    font-size: 40px;
+  }
+}

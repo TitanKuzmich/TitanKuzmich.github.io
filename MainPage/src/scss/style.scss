@@ -1,0 +1,16 @@
+*{
+  font-family: 'Be Vietnam', sans-serif;
+}
+
+body{
+  background-color: #000;
+  color: white;
+}
+
+.container{
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+@import "blocks/header";
+@import "blocks/works";

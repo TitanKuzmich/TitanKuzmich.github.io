@@ -1,0 +1,136 @@
+* {
+  font-family: 'Be Vietnam', sans-serif; }
+
+body {
+  background-color: #000;
+  color: white; }
+
+.container {
+  max-width: 950px;
+  margin: 0 auto; }
+
+.menu {
+  border-bottom: white solid 1px;
+  border-top: white solid 1px;
+  max-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .menu__logo {
+    width: 120px;
+    height: 120px; }
+  .menu__header {
+    margin-right: 25px;
+    font-size: 40px; }
+
+.works {
+  min-height: 500px;
+  margin-top: 30px;
+  color: black; }
+  .works__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .works__wrapper__card {
+      box-sizing: border-box;
+      transition: all 0.3s ease-in-out;
+      background-color: white;
+      opacity: 0.7;
+      width: 300px;
+      height: 350px;
+      margin: 30px 60px 30px 30px;
+      overflow: hidden;
+      border: white solid 1px; }
+      .works__wrapper__card:hover {
+        opacity: 1; }
+      .works__wrapper__card__slider {
+        margin-top: 20px;
+        width: 600px;
+        height: 310px;
+        display: flex;
+        transition: all 0.5s ease-in-out; }
+        .works__wrapper__card__slider__left {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around; }
+        .works__wrapper__card__slider__right {
+          max-height: 350px;
+          width: 50%;
+          overflow-y: scroll; }
+      .works__wrapper__card__img {
+        width: 250px;
+        height: 150px; }
+      .works__wrapper__card__name {
+        width: 250px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 60px;
+        border-top: black solid 1px;
+        border-bottom: black solid 1px; }
+        .works__wrapper__card__name a {
+          text-decoration: none;
+          color: black; }
+      .works__wrapper__card__more, .works__wrapper__card__back {
+        cursor: pointer;
+        color: black;
+        font-size: 20px;
+        text-align: center; }
+        .works__wrapper__card__more:hover, .works__wrapper__card__back:hover {
+          opacity: 0.8; }
+      .works__wrapper__card__text {
+        margin: 0 20px 5px 20px;
+        position: relative;
+        min-height: 250px;
+        font-size: 20px; }
+      .works__wrapper__card__back {
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%); }
+      .works__wrapper__card__flip {
+        display: flex;
+        position: relative;
+        perspective: 1000px;
+        margin-top: 20px;
+        height: 300px; }
+        .works__wrapper__card__flip__frontside, .works__wrapper__card__flip__backside {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          -webkit-backface-visibility: hidden;
+                  backface-visibility: hidden;
+          transition: all 0.5s ease-in-out; }
+        .works__wrapper__card__flip__backside {
+          overflow-y: scroll;
+          background-color: black;
+          color: white;
+          transform: rotateY(180deg);
+          display: block;
+          box-sizing: content-box; }
+        .works__wrapper__card__flip__text {
+          padding: 0 20px;
+          min-height: 250px;
+          position: relative;
+          font-size: 20px; }
+        .works__wrapper__card__flip__more, .works__wrapper__card__flip__back {
+          cursor: pointer;
+          color: black;
+          font-size: 20px;
+          text-align: center; }
+          .works__wrapper__card__flip__more:hover, .works__wrapper__card__flip__back:hover {
+            opacity: 0.8; }
+        .works__wrapper__card__flip__back {
+          color: white;
+          position: absolute;
+          bottom: -40px;
+          left: 50%;
+          transform: translateX(-50%); }

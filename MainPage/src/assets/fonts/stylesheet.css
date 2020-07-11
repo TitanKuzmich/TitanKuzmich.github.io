@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url('BeVietnam-ThinItalic.eot');
+    src: local('Be Vietnam Thin Italic'), local('BeVietnam-ThinItalic'),
+        url('BeVietnam-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('BeVietnam-ThinItalic.woff2') format('woff2'),
+        url('BeVietnam-ThinItalic.woff') format('woff'),
+        url('BeVietnam-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url('BeVietnam-Regular.eot');
+    src: local('Be Vietnam Regular'), local('BeVietnam-Regular'),
+        url('BeVietnam-Regular.eot?#iefix') format('embedded-opentype'),
+        url('BeVietnam-Regular.woff2') format('woff2'),
+        url('BeVietnam-Regular.woff') format('woff'),
+        url('BeVietnam-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url('BeVietnam-Bold.eot');
+    src: local('Be Vietnam Bold'), local('BeVietnam-Bold'),
+        url('BeVietnam-Bold.eot?#iefix') format('embedded-opentype'),
+        url('BeVietnam-Bold.woff2') format('woff2'),
+        url('BeVietnam-Bold.woff') format('woff'),
+        url('BeVietnam-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url('BeVietnam-Light.eot');
+    src: local('Be Vietnam Light'), local('BeVietnam-Light'),
+        url('BeVietnam-Light.eot?#iefix') format('embedded-opentype'),
+        url('BeVietnam-Light.woff2') format('woff2'),
+        url('BeVietnam-Light.woff') format('woff'),
+        url('BeVietnam-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url('BeVietnam-SemiBold.eot');
+    src: local('Be Vietnam SemiBold'), local('BeVietnam-SemiBold'),
+        url('BeVietnam-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('BeVietnam-SemiBold.woff2') format('woff2'),
+        url('BeVietnam-SemiBold.woff') format('woff'),
+        url('BeVietnam-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url('BeVietnam-BoldItalic.eot');
+    src: local('Be Vietnam Bold Italic'), local('BeVietnam-BoldItalic'),
+        url('BeVietnam-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('BeVietnam-BoldItalic.woff2') format('woff2'),
+        url('BeVietnam-BoldItalic.woff') format('woff'),
+        url('BeVietnam-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url('BeVietnam-SemiBoldItalic.eot');
+    src: local('Be Vietnam SemiBold Italic'), local('BeVietnam-SemiBoldItalic'),
+        url('BeVietnam-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('BeVietnam-SemiBoldItalic.woff2') format('woff2'),
+        url('BeVietnam-SemiBoldItalic.woff') format('woff'),
+        url('BeVietnam-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url('BeVietnam-Thin.eot');
+    src: local('Be Vietnam Thin'), local('BeVietnam-Thin'),
+        url('BeVietnam-Thin.eot?#iefix') format('embedded-opentype'),
+        url('BeVietnam-Thin.woff2') format('woff2'),
+        url('BeVietnam-Thin.woff') format('woff'),
+        url('BeVietnam-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url('BeVietnam-ExtraBold.eot');
+    src: local('Be Vietnam ExtraBold'), local('BeVietnam-ExtraBold'),
+        url('BeVietnam-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('BeVietnam-ExtraBold.woff2') format('woff2'),
+        url('BeVietnam-ExtraBold.woff') format('woff'),
+        url('BeVietnam-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url('BeVietnam-Medium.eot');
+    src: local('Be Vietnam Medium'), local('BeVietnam-Medium'),
+        url('BeVietnam-Medium.eot?#iefix') format('embedded-opentype'),
+        url('BeVietnam-Medium.woff2') format('woff2'),
+        url('BeVietnam-Medium.woff') format('woff'),
+        url('BeVietnam-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url('BeVietnam-LightItalic.eot');
+    src: local('Be Vietnam Light Italic'), local('BeVietnam-LightItalic'),
+        url('BeVietnam-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('BeVietnam-LightItalic.woff2') format('woff2'),
+        url('BeVietnam-LightItalic.woff') format('woff'),
+        url('BeVietnam-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url('BeVietnam-ExtraBoldItalic.eot');
+    src: local('Be Vietnam ExtraBold Italic'), local('BeVietnam-ExtraBoldItalic'),
+        url('BeVietnam-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('BeVietnam-ExtraBoldItalic.woff2') format('woff2'),
+        url('BeVietnam-ExtraBoldItalic.woff') format('woff'),
+        url('BeVietnam-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url('BeVietnam-MediumItalic.eot');
+    src: local('Be Vietnam Medium Italic'), local('BeVietnam-MediumItalic'),
+        url('BeVietnam-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('BeVietnam-MediumItalic.woff2') format('woff2'),
+        url('BeVietnam-MediumItalic.woff') format('woff'),
+        url('BeVietnam-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    src: url('BeVietnam-Italic.eot');
+    src: local('Be Vietnam Italic'), local('BeVietnam-Italic'),
+        url('BeVietnam-Italic.eot?#iefix') format('embedded-opentype'),
+        url('BeVietnam-Italic.woff2') format('woff2'),
+        url('BeVietnam-Italic.woff') format('woff'),
+        url('BeVietnam-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+

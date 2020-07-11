@@ -1,0 +1,131 @@
+.works{
+  min-height: 500px;
+  margin-top: 30px;
+  color: black;
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    &__card{
+      box-sizing: border-box;
+      transition: all 0.3s ease-in-out;
+      background-color: white;
+      opacity: 0.7;
+      width: 300px;
+      height: 350px;
+      margin: 30px 60px 30px 30px;
+      overflow: hidden;
+      border: white solid 1px;
+      &:hover{
+        opacity: 1;
+      }
+      &__slider{
+        margin-top: 20px;
+        width: 600px;
+        height: 310px;
+        display: flex;
+        transition: all 0.5s ease-in-out;
+        &__left{
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+        }
+        &__right{
+          max-height: 350px;
+          width: 50%;
+          overflow-y: scroll;
+        }
+      }
+      &__img{
+        width: 250px;
+        height: 150px;
+      }
+      &__name{
+        width: 250px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 60px;
+        border-top: black solid 1px;
+        border-bottom: black solid 1px;
+        a{
+          text-decoration: none;
+          color: black;
+        }
+      }
+      &__more, &__back{
+        cursor: pointer;
+        color: black;
+        font-size: 20px;
+        text-align: center;
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+      &__text{
+        margin: 0 20px 5px 20px;
+        position: relative;
+        min-height: 250px;
+        font-size: 20px;
+      }
+      &__back{
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &__flip{
+        display: flex;
+        position: relative;
+        perspective: 1000px;
+        margin-top: 20px;
+        height: 300px;
+        &__frontside, &__backside{
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          backface-visibility: hidden;
+          transition: all 0.5s ease-in-out;
+        }
+        &__backside{
+          overflow-y: scroll;
+          background-color: black;
+          color: white;
+          transform: rotateY(180deg);
+          display: block;
+          box-sizing: content-box;
+        }
+        &__text{
+          padding: 0 20px;
+          min-height: 250px;
+          position: relative;
+          font-size: 20px;
+        }
+        &__more, &__back{
+          cursor: pointer;
+          color: black;
+          font-size: 20px;
+          text-align: center;
+          &:hover{
+            opacity: 0.8;
+          }
+        }
+        &__back{
+          color: white;
+          position: absolute;
+          bottom: -40px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}
