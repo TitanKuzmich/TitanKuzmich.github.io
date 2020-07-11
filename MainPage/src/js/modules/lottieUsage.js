@@ -5,5 +5,5 @@ lottie.loadAnimation({
     renderer : 'svg',
     loop     : true,
     autoplay : true,
-    path     : 'img/eyeLogo.json'
+    path     : '../MainPage/dist/img/eyeLogo.json'
 });
