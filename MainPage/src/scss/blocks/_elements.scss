@@ -1,0 +1,38 @@
+.elements__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  position: relative;
+  margin-bottom: 50px;
+  &-text:after {
+    content: "Awesomeness";
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    position: absolute;
+    left: 255px;
+    width: 0;
+    overflow: hidden;
+    transition: 1s ease-in;
+  }
+  &-text:hover:after{
+    transition-delay: 0.2s;
+    width: 100%;
+  }
+  &-text:before {
+    content: "Awesomeness";
+    -webkit-text-fill-color: #FF5252;
+    -webkit-text-stroke-width: 1px;
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    transition: 1s ease-in;
+  }
+  &-text:hover:before{
+    height: 100%;
+  }
+}
