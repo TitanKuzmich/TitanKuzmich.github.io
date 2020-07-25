@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+}
+
+.container{
+  height: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+//style of basic elements
+@import "base/buttons";
+@import "base/exploreLink";
+
+//main style
+@import "blocks/header";
+@import "blocks/homeSlider";
+@import "blocks/featured";
+@import "blocks/exclusive";
+@import "blocks/trending";
+@import "blocks/finest";
+@import "blocks/mobileApp";
+@import "blocks/footer";
+
+//main media
+@import "media/mw1280";
+@import "media/mw1024";
+@import "media/mw960";
+@import "media/mw640";
+@import "media/mw320minw240";
+
+//contact style
+@import "contact/blocks/subheader";
+@import "contact/blocks/addresses";
+
+//contact media
+@import "contact/media/mediaForContact";
+
+

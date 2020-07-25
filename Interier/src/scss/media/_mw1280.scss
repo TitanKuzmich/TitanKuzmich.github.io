@@ -1,0 +1,85 @@
+@media (max-width: 1280px) {
+  .container{
+    max-width: 1000px;
+  }
+  //header
+  ul {
+    margin-right: 5px;
+    li {
+      font-size: 15px;
+      line-height: 22px;
+      padding: 0 10px;
+    }
+  }
+
+  //slider
+  .home-slider, .lower-slider {
+    min-height: 700px;
+    .inner-slide {
+      min-height: 700px;
+    }
+  }
+
+  //featured
+  .featured__catalog-item {
+    width: 350px;
+    height: 350px;
+    margin-bottom: 30px;
+  }
+
+  //exclusive
+  .exclusive {
+    margin-bottom: 80px;
+    min-height: 520px;
+    &__container{
+      margin-left: 75px;
+    }
+    &__left, &__right {
+      min-width: 520px;
+    }
+    &__descr{
+      max-width: 330px;
+    }
+  }
+
+  //trending
+  .trending{
+    margin-bottom: 80px;
+    &__catalog {
+      justify-content: space-around;
+    }
+    &__header {
+      margin-bottom: 0;
+    }
+    &-link {
+      margin-top: 50px;
+    }
+  }
+
+  //finest
+  .finest {
+    margin: 80px 0;
+    &__wrapper{
+      flex-direction: column;
+    }
+    &__left{
+      margin-bottom: 30px;
+    }
+  }
+
+  //footer
+  footer {
+    padding-top: 80px;
+    .footer__top {
+      &-info {
+        width: 340px;
+      }
+      &-inTouch{
+        width: 360px;
+      }
+      &-sendEmail{
+        width: 360px;
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+footer{
+  min-height: 384px;
+  padding-top: 120px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  .footer__top{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    &-title{
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+      color: #6c6c6c;
+      margin-bottom: 35px;
+      text-transform: uppercase;
+    }
+    &-contacts{
+      width: 270px;
+    }
+    &-email{
+      margin-top: 30px;
+    }
+    &-info{
+      width: 410px;
+      &-content{
+        display: flex;
+        justify-content: space-between;
+        &-left, &-right{
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    &-link{
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 26px;
+      text-decoration: none;
+      color: black;
+      text-transform: uppercase;
+    }
+    &-inTouch{
+      width: 375px;
+    }
+    &-form {
+      width: 370px;
+      height: 48px;
+      margin-top: 26px;
+      position: relative;
+    }
+    &-sendEmail{
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 50px 10px 15px;
+      font-size: 14px;
+      line-height: 22px;
+      color: #6c6c6c;
+      &-btn{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 85%;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        .fa-paper-plane{
+         font-size: 15px;
+        }
+      }
+    }
+  }
+  .footer__lower{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 55px;
+    &-copyright{
+      font-size: 12px;
+      line-height: 26px;
+      color: #6c6c6c;
+    }
+    &-social{
+      text-decoration: none;
+      color: #6c6c6c;
+    }
+    &-socials{
+      font-size: 24px;
+      .marg{
+        margin: 0 2px;
+        cursor: pointer;
+        transition: .3s;
+        &:hover{
+          color: black;
+        }
+      }
+    }
+    &-conditions{
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 26px;
+      color: #6c6c6c;
+      &-termsLink, &-privacyLink{
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 26px;
+        color: #6c6c6c;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: .3s;
+        &:hover{
+          color: black;
+        }
+      }
+    }
+  }
+}

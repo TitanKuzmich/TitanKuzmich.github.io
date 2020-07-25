@@ -1,0 +1,30 @@
+.trending{
+  min-height: 860px;
+  margin-bottom: 120px;
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 34px;
+  }
+  &__title{
+    font-size: 36px;
+    font-weight: 700;
+  }
+  &__catalog{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    &-link{
+      margin-top: 30px;
+    }
+    &-img{
+      transition: .3s;
+      opacity: .85;
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+}

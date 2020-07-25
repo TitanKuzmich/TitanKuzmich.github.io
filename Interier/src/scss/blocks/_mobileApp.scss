@@ -1,0 +1,34 @@
+.mobile-app{
+  min-height: 516px;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  &__wrapper{
+    padding-top: 125px;
+    padding-left: 100px;
+    max-width: 470px;
+  }
+  &__promo{
+    text-transform: uppercase;
+    color: #6c6c6c;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 48px;
+  }
+  &__title{
+    color: rgba(0,0,0,.8);
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 72px;
+  }
+  &__descr{
+    color: rgba(0,0,0,.6);
+    font-size: 20px;
+    font-weight: 300;
+    max-width: 390px;
+    line-height: 24px;
+  }
+  &__links{
+    margin-top: 33px;
+  }
+}

@@ -1,0 +1,23 @@
+@media (max-width: 1024px) {
+  .container {
+    max-width: 940px;
+  }
+  //exclusive
+  .exclusive {
+    margin-bottom: 80px;
+    min-height: 500px;
+    &__container{
+      margin-left: 50px;
+    }
+    &__left, &__right {
+      min-width: 500px;
+    }
+    &__descr{
+      max-width: 305px;
+    }
+  }
+  //footer
+  footer .footer__top-contacts{
+    width: 205px;
+  }
+}

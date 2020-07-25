@@ -1,0 +1,59 @@
+.home-slider, .lower-slider{
+  min-height: 800px;
+  position: relative;
+  ul.slick-dots{
+    position: absolute;
+    bottom: 19px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    button{
+      margin:0 2px;
+      padding:0;
+      background: none;
+      border: none;
+      width: 35px;
+      height: 35px;
+      font-size: 0;
+      display: block;
+      background: rgba(0,0,0,0.1);
+      border-radius:100%;
+
+    }
+    li.slick-active button{
+      background:rgba(0,0,0,0.8);
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .inner-slide{
+    min-height: 800px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__promo{
+      text-transform: uppercase;
+      padding-top: 311px;
+      color: #43a047;
+      font-size: 20px;
+      font-weight: 700;
+      &-red{
+        color: #e53935;
+      }
+    }
+    &__title{
+      text-transform: uppercase;
+      color: black;
+      font-size: 55px;
+      font-weight: 100;
+    }
+    &__descr{
+      color: rgba(0,0,0,.6);
+      font-size: 13px;
+      font-weight: 300;
+      max-width: 470px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.explore-more__link{
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  &-top {
+    display: block;
+  }
+  &-low {
+    display: none;
+  }
+  .fa-chevron-right{
+    font-size: 15px;
+    color: rgba(0,0,0,.7);
+    transition: .3s;
+  }
+  &:hover .fa-chevron-right{
+    color: black;
+  }
+}
+
+@media (max-width: 960px) {
+  .explore-more__link{
+    font-size: 16px;
+    letter-spacing: 2px;
+    .fa-chevron-right{
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .explore-more__link {
+    &-top {
+      display: none;
+    }
+
+    &-low {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}

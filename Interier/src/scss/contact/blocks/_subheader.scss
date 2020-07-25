@@ -1,0 +1,14 @@
+.subheader{
+  min-height: 352px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #f9f9f9;
+  &__text{
+    color: black;
+    font-size: 62px;
+    font-weight: 100;
+    position: absolute;
+    top: 65%;
+  }
+}

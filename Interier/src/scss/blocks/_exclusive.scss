@@ -1,0 +1,35 @@
+.exclusive{
+  min-height: 683px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 120px;
+  &__left, &__right {
+    min-width: 683px;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+  }
+  &__container{
+    margin-top: 200px;
+    margin-left: 51px;
+  }
+  &__promo{
+    text-transform: uppercase;
+    color: #1e88e5;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 48px;
+  }
+  &__title{
+    color: black;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  &__descr{
+    color: rgba(0,0,0,.6);
+    font-size: 14px;
+    font-weight: 300;
+    max-width: 390px;
+    line-height: 24px;
+  }
+}
