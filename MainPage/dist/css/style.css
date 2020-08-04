@@ -33,6 +33,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 10px; }
     .works__wrapper__card {
       box-sizing: border-box;
@@ -450,11 +451,14 @@ body {
 
 .cards {
   width: 100%;
-  justify-content: space-around; }
+  height: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap; }
   .cards .updown-card {
     width: 350px;
     position: relative;
     padding: 100px 30px 60px 30px;
+    margin-bottom: 30px;
     background: white;
     color: black;
     box-shadow: 0 5px 25px rgba(255, 255, 255, 0.1);
