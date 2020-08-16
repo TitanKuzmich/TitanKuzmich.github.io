@@ -1,0 +1,36 @@
+//colors
+@import "base/variables";
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+  box-sizing: border-box;
+}
+
+.container{
+  height: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+//main style
+@import "blocks/header";
+@import "blocks/subheader";
+@import "blocks/aboutUs";
+@import "blocks/teachers";
+@import "blocks/quote";
+@import "blocks/bonus";
+@import "blocks/feedback";
+@import "blocks/contacts";
+@import "blocks/footer";
+
+//components
+@import "base/componenets";
+@import "blocks/modal";
+
+//medias
+@import "media/mw1280";
+@import "media/mw1024";
+@import "media/mw960";
+@import "media/mw640";

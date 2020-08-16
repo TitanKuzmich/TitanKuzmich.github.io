@@ -1,0 +1,189 @@
+//.feedback {
+//  min-height: 400px;
+//  margin: 60px auto;
+//  &-img {
+//    width: 200px;
+//    height: 200px;
+//    border-radius: 15px;
+//    margin-right: 20px;
+//    z-index: 140;
+//  }
+//
+//  &-name {
+//    color: $primaryText;
+//    font-size: 25px;
+//    font-weight: 500;
+//  }
+//
+//  &-text {
+//    color: $primaryText;
+//    font-size: 18px;
+//    font-weight: 300;
+//  }
+//}
+//.feedback-slider {
+//    display: flex;
+//    //width: 900px;
+//    //position: relative;
+//    //margin: 0 auto;
+//    //  ul.slick-dots {
+//    //    position: absolute;
+//    //    right: 0;
+//    //    bottom: 0;
+//    //    left: 0;
+//    //    z-index: 15;
+//    //    display: flex;
+//    //    justify-content: center;
+//    //    margin-right: 15%;
+//    //    margin-left: 15%;
+//    //    list-style: none;
+//    //
+//    //    button {
+//    //      box-sizing: content-box;
+//    //      flex: 0 1 auto;
+//    //      width: 30px;
+//    //      height: 6px;
+//    //      margin-right: 3px;
+//    //      margin-left: 3px;
+//    //      cursor: pointer;
+//    //      background-color: white;
+//    //      background-clip: padding-box;
+//    //      border-top: 10px solid transparent;
+//    //      border-bottom: 10px solid transparent;
+//    //      opacity: .5;
+//    //      transition: opacity .6s ease;
+//    //    }
+//    //
+//    //    li.slick-active button {
+//    //      opacity: 1;
+//    //    }
+//    //  }
+//    }
+//  .inner-slider {
+//    width: 700px;
+//    height: 300px;
+//    margin: 0 auto;
+//    display: flex;
+//    justify-content: space-around;
+//    align-items: center;
+//  }
+
+.feedback{
+  padding: 90px 0;
+  &-title{
+    margin-bottom: -20px !important;
+  }
+  .carousel{
+    display: block;
+    margin: 0 auto;
+    width: 900px;
+    position: relative;
+    &-indicators{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 15;
+      display: flex;
+      justify-content: center;
+      margin-right: 15%;
+      margin-left: 15%;
+      list-style: none;
+      li{
+        box-sizing: content-box;
+        flex: 0 1 auto;
+        width: 30px;
+        height: 6px;
+        margin-right: 3px;
+        margin-left: 3px;
+        cursor: pointer;
+        background-color: $primary;
+        background-clip: padding-box;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        opacity: .5;
+        transition: opacity .6s ease;
+      }
+      .active{
+        opacity: 1;
+      }
+    }
+    &-inner{
+      width: 100%;
+      height: 350px;
+      position: relative;
+      overflow: hidden;
+    }
+    &-slides{
+      height: 350px;
+      display: flex;
+    }
+    &-item{
+      height: 100%;
+      .feedback{
+        &-content-wrapper{
+          width: 700px;
+          height: 100%;
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        &-img {
+          width: 200px;
+          height: 200px;
+          border-radius: 15px;
+          margin-right: 20px;
+          z-index: 140;
+        }
+
+        &-name {
+          color: $primaryText;
+          font-size: 25px;
+          font-weight: 500;
+        }
+
+        &-text {
+          color: $primaryText;
+          font-size: 18px;
+          font-weight: 300;
+        }
+      }
+    }
+    &-prev, &-next{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      color: $textIcons;
+      opacity: .8;
+      text-align: center;
+      font-size: 40px;
+      transition: opacity .3s ease;
+      text-decoration: none;
+      background-color: lighten($primary, 10%);
+      &:hover{
+        opacity: 1;
+        background-color: lighten($primary, 5%);
+      }
+    }
+    &-prev{
+      left: 0;
+    }
+    &-next{
+      right: 0;
+    }
+  }
+}
+
+
+
+
+
+

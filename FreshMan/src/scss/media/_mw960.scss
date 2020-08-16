@@ -1,0 +1,131 @@
+@media (max-width: 960px) {
+  .container {
+    max-width: 600px;
+  }
+
+  //header and hamburger menu
+  .header-top {
+    .inner-header {
+      .hamburger {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 26px;
+        height: 15px;
+        cursor: pointer;
+
+        span {
+          display: block;
+          height: 2px;
+          width: 100%;
+          background-color: $textIcons;
+          margin-bottom: 2px;
+          transition: 0.5s all ease;
+        }
+
+        &-active span {
+          margin-bottom: -2px;
+
+          &:nth-child(1) {
+            transform: translateY(3px) rotate(-45deg)
+          }
+
+          &:nth-child(2) {
+            display: none
+          }
+
+          &:nth-child(3) {
+            transform: translateY(3px) rotate(45deg)
+          }
+        }
+      }
+      .main-navigation {
+        position: fixed;
+        top: 68px;
+        left: -100%;
+        background-color: $primary;
+        height: 90px;
+        width: 100%;
+        transition: .6s;
+        z-index: -1;
+        ul{
+          height: 100%;
+          justify-content: space-around;
+          align-items: center;
+        }
+        &-active{
+          left: 0;
+        }
+      }
+    }
+  }
+
+  //subheader
+  .subheader {
+    &-info {
+      padding-top: 50px;
+      width: 550px;
+    }
+    &-title {
+      font-size: 20px;
+    }
+
+    &-text {
+      font-size: 22px;
+    }
+
+    &-img {
+      width: 350px;
+      height: 300px;
+      position: absolute;
+      right: 2%;
+      bottom: 2%;
+    }
+  }
+
+  //quote
+  .quote{
+    &-text{
+      width: auto;
+    }
+  }
+
+  //feedback
+  .feedback{
+    padding: 60px 0;
+    .carousel{
+      width: 600px;
+      &-item{
+        .feedback{
+          &-content-wrapper{
+            width: 450px;
+          }
+
+          &-img {
+            width: 170px;
+            height: 170px;
+          }
+
+          &-name {
+            font-size: 22px;
+          }
+
+          &-text {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  //contacts
+  .contacts {
+    &-info, &-map{
+      width: 400px;
+      height: 400px;
+      margin: 10px auto;
+    }
+  }
+}

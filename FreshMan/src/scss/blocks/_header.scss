@@ -1,0 +1,55 @@
+.header-top {
+  background-color: $primary;
+  height: 68px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  .inner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    .logo img {
+      display: block;
+      width: 300px;
+    }
+
+    .hamburger {
+      display: none;
+    }
+
+    .main-navigation {
+      flex-grow: 2;
+      text-transform: uppercase;
+
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10px;
+
+        li {
+          display: block;
+          font-size: 17px;
+          line-height: 27px;
+          border-bottom: 2px solid transparent;
+          padding: 0 15px;
+          box-sizing: border-box;
+          transition: .3s;
+
+          a {
+            text-decoration: none;
+            color: $textIcons;
+          }
+
+          &:hover {
+            border-bottom: 2px solid white;
+          }
+        }
+      }
+    }
+  }
+}

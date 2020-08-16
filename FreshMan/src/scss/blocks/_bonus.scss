@@ -1,0 +1,123 @@
+.bonus{
+  min-height: 300px;
+  padding: 90px 0 60px 0;
+  &-btn{
+    margin: 30px auto;
+    display: block !important;
+  }
+  &-card-wrapper{
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+  }
+  &-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    .box{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      overflow: hidden;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: $lightPrimary;
+        transition: 0.5s;
+      }
+      &:hover:before{
+        left: -50%;
+        transform: skew(-5deg);
+      }
+      &-content{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        bottom: 15px;
+        right: 15px;
+        border: 2px solid $primary;
+        padding: 25px 15px 15px 15px;
+        text-align: center;
+        box-shadow: 0 5px 10px lighten($primary, 30%);
+        &-header{
+          color: $primaryText;
+          font-size: 22px;
+          margin: 10px 0 10px 0;
+        }
+        &-text{
+          color: $primaryText;
+          margin: 5px 0 0 0;
+          font-size: 14px;
+        }
+        i{
+          color: $primaryText;
+          font-size: 60px;
+        }
+      }
+      &-el{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        box-sizing: border-box;
+        &:before{
+          content: '';
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: $primary;
+          animation: box-border 4s linear infinite;
+        }
+      }
+      &-el:nth-child(1){
+        transform: rotate(0deg);
+      }
+      &-el:nth-child(2){
+        transform: rotate(90deg);
+        &:before{
+          animation-delay: -2s;
+        }
+      }
+      &-el:nth-child(3){
+        transform: rotate(180deg);
+      }
+      &-el:nth-child(4){
+        transform: rotate(270deg);
+        &:before{
+          animation-delay: -2s;
+        }
+      }
+    }
+    @keyframes box-border {
+      0%{
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+      50%{
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+      50.1%{
+        transform: scaleX(1);
+        transform-origin: right;
+      }
+      100%{
+        transform: scaleX(0);
+        transform-origin: right;
+      }
+    }
+  }
+}

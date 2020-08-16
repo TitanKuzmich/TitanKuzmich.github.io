@@ -1,0 +1,55 @@
+.subheader{
+  margin-top: 68px;
+  height: 654px;
+  background: lighten($darkPrimary, 30%);
+  position: relative;
+  &-info{
+    padding-top: 130px;
+    width: 650px;
+    color: $textIcons;
+  }
+  &-title{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: $textIcons;
+  }
+  &-text{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+    margin-bottom: 60px;
+    color: $textIcons;
+    ul{
+      list-style: none;
+    }
+  }
+  &-btn{
+    font-weight: 500;
+  }
+  &-img{
+    width: 450px;
+    height: 400px;
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+  }
+  &-particles{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    &-1{
+      right: 25%;
+      bottom: 80%;
+    }
+    &-2{
+      right: 35%;
+      bottom: 45%;
+    }
+    &-3{
+      right: 5%;
+      bottom: 35%;
+    }
+  }
+
+}

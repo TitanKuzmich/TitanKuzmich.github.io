@@ -1,0 +1,230 @@
+@media (max-width: 640px) {
+  .container{
+    max-width: 300px;
+  }
+
+  //header and hamburger menu
+  .header-top {
+    .inner-header {
+      .logo img {
+        width: 200px;
+      }
+      .main-navigation {
+        top: 68px;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        transition: .6s;
+        z-index: -1;
+        ul{
+          height: 100%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-right: 0;
+          li {
+            display: block;
+            font-size: 20px;
+            line-height: 27px;
+            border-bottom: 2px solid transparent;
+            padding: 0 15px;
+            box-sizing: border-box;
+            transition: .3s;
+            margin-bottom: 20px;
+          }
+        }
+        &-active{
+          left: 0;
+        }
+      }
+    }
+  }
+
+  //subheader
+  .subheader {
+    height: 400px;
+    &-info {
+      padding-top: 30px;
+      width: 100%;
+    }
+    &-title {
+      font-size: 13px;
+    }
+
+    &-text {
+      font-size: 14px;
+    }
+
+    &-img {
+      display: none;
+    }
+  }
+
+  //about us
+  .about-us{
+    padding: 20px 0;
+    &-cards{
+      .updown-card{
+        width: 300px;
+        padding: 80px 10px 20px 10px;
+        margin-bottom: 15px;
+        &__num{
+          left: 10px;
+          top: 27px;
+          font-size: 59px;
+        }
+        &:hover .updown-card__num{
+          transform: translateY(-20px);
+        }
+        &__header {
+          font-size: 25px;
+        }
+        &__text{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  //teachers
+  .teachers{
+    padding: 20px 0;
+    &-cards {
+      .flip {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        margin: 15px;
+        .frontside-img {
+          height: 300px;
+          margin-bottom: 10px;
+        }
+
+        .backside {
+          padding: 15px;
+          &-text{
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+        }
+
+        .more, .back{
+          &:hover:before, &:hover:after, &:hover span:before, &:hover span:after{
+            width: calc( 150px / 2 );
+            height: calc( 25px / 2 );
+          }
+        }
+      }
+    }
+  }
+
+  //quote
+  .quote{
+    margin-bottom: 20px;
+    &-text{
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  //bonus
+  .bonus{
+    padding: 20px 0 10px 0;
+    &-btn{
+      margin: 20px auto;
+    }
+    &-card-wrapper{
+      width: 260px;
+      height: 260px;
+    }
+    &-container{
+      .box {
+        &-content {
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          bottom: 5px;
+          right: 5px;
+          padding: 40px 5px 5px 5px;
+
+          &-header {
+            font-size: 18px;
+            margin: 16px 0;
+          }
+
+          &-text {
+            font-size: 13px;
+          }
+
+          i {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  //feedback
+  .feedback{
+    padding: 30px 0;
+    .carousel{
+      margin-top: 30px;
+      width: 300px;
+      &-indicators {
+        bottom: -30px;
+      }
+      &-inner{
+        height: 350px;
+      }
+      &-slides{
+        height: 350px;
+      }
+      &-item{
+        .feedback{
+          &-content-wrapper{
+            width: 200px;
+            flex-direction: column;
+          }
+
+          &-img {
+            width: 150px;
+            height: 150px;
+          }
+
+          &-name {
+            font-size: 14px;
+          }
+
+          &-text {
+            font-size: 12px;
+          }
+        }
+      }
+      &-prev, &-next{
+        top: 50%;
+        width: 10%;
+        height: 80%;
+        border-radius: 0;
+      }
+    }
+  }
+
+  //footer
+  footer{
+    .footer-container {
+      .social-links {
+        font-size: 12px;
+      }
+      .social-link {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin: 6px;
+      }
+
+      .copyright{
+        font-size: 10px;
+      }
+    }
+  }
+}

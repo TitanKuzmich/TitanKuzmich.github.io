@@ -1,0 +1,44 @@
+@media (max-width: 1280px) {
+  .container{
+    width: 1000px;
+  }
+  //header
+  .header-top {
+    .inner-header {
+      .logo img {
+        width: 260px;
+      }
+      .main-navigation {
+
+        ul {
+          margin-right: 6px;
+
+          li {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+  //subheader
+  .subheader{
+    height: 554px;
+    &-info {
+      padding-top: 90px;
+    }
+    &-particles {
+      display: none;
+    }
+    &-img{
+      right: 4%;
+      bottom: 7%;
+    }
+  }
+  //contacts
+  .contacts {
+    &-address, &-phone, &-email {
+      font-size: 18px;
+    }
+  }
+}

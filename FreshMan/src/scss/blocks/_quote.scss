@@ -1,0 +1,12 @@
+.quote{
+  min-height: 200px;
+  margin-bottom: 60px;
+  &-text{
+    width: 700px;
+    margin: 25px auto;
+    color:$primaryText;
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

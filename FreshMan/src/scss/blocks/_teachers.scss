@@ -1,0 +1,87 @@
+.teachers{
+  min-height: 600px;
+  padding: 60px 0;
+  &-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .flip {
+      position: relative;
+      width: 400px;
+      height: 500px;
+      margin: 30px;
+
+      .frontside, .backside {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border: 1px solid $primary;
+        box-shadow: 0 5px 25px lighten($primary, 30%);
+        border-radius: 15px;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .frontside-img {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 20px;
+      }
+
+      .backside {
+        transform: rotateY(180deg);
+        display: block;
+        padding: 30px;
+
+        &-container{
+          width: 100%;
+          height: 100%;
+          overflow-y: scroll;
+        }
+        &-text{
+          font-size: 18px;
+          color: $secondaryText;
+          margin-bottom: 20px;
+        }
+      }
+
+      .more, .back{
+        position: relative;
+        background: white;
+        &:before, &:after, span:before, span:after{
+          content: '';
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background: $primaryText;
+          transition: .5s;
+          mix-blend-mode: hue;
+        }
+        &:before{
+          top: -2px;
+          left: -2px;
+        }
+        &:after{
+          top: -2px;
+          right: -2px;
+        }
+        span:before{
+          bottom: -2px;
+          left: -2px;
+        }
+        span:after{
+          bottom: -2px;
+          right: -2px;
+        }
+        &:hover:before, &:hover:after, &:hover span:before, &:hover span:after{
+          width: calc( 250px / 2 );
+          height: calc( 50px / 2 );
+        }
+      }
+    }
+  }
+}

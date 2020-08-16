@@ -1,0 +1,42 @@
+.contacts{
+  min-height: 450px;
+  padding: 60px 0;
+  &-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &-info, &-map{
+    width: 45%;
+    height: 450px;
+    border: 1px solid $primary;
+    box-shadow: 0 5px 10px lighten($primary, 30%);
+  }
+  &-info{
+    padding: 30px;
+    color: $primaryText;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    div{
+      font-size: 26px;
+      line-height: 30px;
+      font-weight: 500;
+    }
+  }
+  &-address, &-phone, &-email{
+    font-size: 20px;
+    color: $secondaryText;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+  &-phone, &-email{
+    text-decoration: none;
+    transition: .3s;
+    &:hover{
+      color: $primaryText;
+    }
+  }
+}

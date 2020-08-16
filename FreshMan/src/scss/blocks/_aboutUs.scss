@@ -1,0 +1,76 @@
+.about-us{
+  min-height: 600px;
+  padding: 60px 0;
+  &-cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .updown-card{
+      width: 350px;
+      position: relative;
+      padding: 100px 30px 50px 30px;
+      margin-bottom: 30px;
+      background: white;
+      color: black;
+      border: 1px solid $primary;
+      box-shadow: 0 5px 25px lighten($primary, 30%);
+      border-radius: 15px;
+      overflow: hidden;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $primary;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.5s;
+      }
+      &:hover:before{
+        transform: scaleY(1);
+        transform-origin: bottom;
+        transition: transform 0.5s;
+      }
+      &__num{
+        color: lighten($secondaryText, 20%);
+        position: absolute;
+        left: 21px;
+        top: 57px;
+        font-size: 79px;
+        font-weight: 800;
+        z-index: 1;
+        opacity: .2;
+        transition: .5s;
+      }
+      &:hover .updown-card__num{
+        opacity: 1;
+        color: white;
+        transform: translateY(-40px);
+      }
+      &__header{
+        position: relative;
+        font-size: 35px;
+        z-index: 2;
+        color: $primaryText;
+        transition: .5s;
+        margin-bottom: 10px;
+      }
+      &:hover .updown-card__header{
+        color: white;
+      }
+      &__text{
+        position: relative;
+        font-size: 18px;
+        z-index: 2;
+        color: $secondaryText;
+        transition: .5s;
+      }
+      &:hover .updown-card__text{
+        color: white;
+      }
+    }
+  }
+}
