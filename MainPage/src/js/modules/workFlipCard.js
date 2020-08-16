@@ -5,7 +5,6 @@ const workFlipCard = () => {
         more = document.querySelectorAll('.works__wrapper__card__flip__more'),
         back = document.querySelectorAll('.works__wrapper__card__flip__back');
 
-    console.log(wrappers);
     more.forEach((item, i) => {
         item.addEventListener('click', () => {
             frontSide[i].style.transform = 'rotateY(180deg)';
