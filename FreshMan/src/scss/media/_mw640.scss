@@ -42,9 +42,9 @@
 
   //subheader
   .subheader {
-    height: 400px;
+    height: 450px;
     &-info {
-      padding-top: 30px;
+      padding-top: 15px;
       width: 100%;
     }
     &-title {
@@ -53,6 +53,7 @@
 
     &-text {
       font-size: 14px;
+      margin-bottom: 20px;
     }
 
     &-img {
@@ -209,22 +210,48 @@
     }
   }
 
+  //contacts
+  .contacts {
+    &-info {
+      div {
+        font-size: 21px;
+        line-height: 26px;
+      }
+    }
+
+    &-address, &-phone, &-email {
+      margin-bottom: 20px;
+    }
+  }
+
   //footer
   footer{
     .footer-container {
-      .social-links {
-        font-size: 12px;
-      }
-      .social-link {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        margin: 6px;
-      }
-
       .copyright{
         font-size: 10px;
       }
+    }
+  }
+  .social-links {
+    font-size: 12px;
+  }
+  .social-link {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin: 6px;
+  }
+
+  //modal
+  .modal {
+    width: 300px;
+    min-height: 350px;
+    &__subtitle{
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    &__description {
+      font-size: 12px;
     }
   }
 }

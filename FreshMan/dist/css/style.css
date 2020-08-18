@@ -92,6 +92,10 @@
       right: 5%;
       bottom: 35%; }
 
+.social-links-subheader {
+  width: 160px;
+  margin-top: 30px; }
+
 .about-us {
   min-height: 600px;
   padding: 60px 0; }
@@ -476,49 +480,6 @@ footer {
     justify-content: space-between;
     align-items: center;
     height: 100%; }
-    footer .footer-container .social-links {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: #FFFFFF;
-      text-transform: uppercase; }
-      footer .footer-container .social-links div {
-        margin-top: 10px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-    footer .footer-container .social-link {
-      position: relative;
-      text-decoration: none;
-      display: block;
-      width: 40px;
-      height: 40px;
-      text-align: center;
-      line-height: 40px;
-      color: #FFFFFF;
-      overflow: hidden;
-      margin: 8px;
-      transition: .2s;
-      border: 1px solid #FFFFFF;
-      transform: rotate(45deg); }
-      footer .footer-container .social-link .s-l {
-        transform: rotate(-45deg); }
-      footer .footer-container .social-link:before {
-        content: '';
-        position: absolute;
-        bottom: -100%;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #03A9F4;
-        transition: .2s; }
-      footer .footer-container .social-link:hover:before {
-        bottom: 0;
-        background-color: #FFFFFF; }
-      footer .footer-container .social-link:hover {
-        color: #03A9F4; }
     footer .footer-container .copyright {
       font-size: 17px;
       font-weight: 300;
@@ -527,6 +488,51 @@ footer {
         color: #FFFFFF;
         display: block;
         text-decoration: none; }
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  text-transform: uppercase; }
+  .social-links div {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.social-link {
+  position: relative;
+  text-decoration: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #FFFFFF;
+  overflow: hidden;
+  margin: 8px;
+  transition: .2s;
+  border: 1px solid #FFFFFF;
+  transform: rotate(45deg); }
+  .social-link .s-l {
+    transform: rotate(-45deg); }
+  .social-link:before {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #03A9F4;
+    transition: .2s; }
+  .social-link:hover:before {
+    bottom: 0;
+    background-color: #FFFFFF; }
+  .social-link:hover {
+    color: #03A9F4; }
 
 .title {
   color: #212121;
@@ -696,7 +702,7 @@ footer {
   .subheader {
     height: 554px; }
     .subheader-info {
-      padding-top: 90px; }
+      padding-top: 40px; }
     .subheader-particles {
       display: none; }
     .subheader-img {
@@ -754,7 +760,7 @@ footer {
     .header-top .inner-header .main-navigation-active {
       left: 0; }
   .subheader-info {
-    padding-top: 50px;
+    padding-top: 20px;
     width: 550px; }
   .subheader-title {
     font-size: 20px; }
@@ -816,14 +822,15 @@ footer {
     .header-top .inner-header .main-navigation-active {
       left: 0; }
   .subheader {
-    height: 400px; }
+    height: 450px; }
     .subheader-info {
-      padding-top: 30px;
+      padding-top: 15px;
       width: 100%; }
     .subheader-title {
       font-size: 13px; }
     .subheader-text {
-      font-size: 14px; }
+      font-size: 14px;
+      margin-bottom: 20px; }
     .subheader-img {
       display: none; }
   .about-us {
@@ -912,12 +919,25 @@ footer {
         width: 10%;
         height: 80%;
         border-radius: 0; }
-  footer .footer-container .social-links {
+  .contacts-info div {
+    font-size: 21px;
+    line-height: 26px; }
+  .contacts-address, .contacts-phone, .contacts-email {
+    margin-bottom: 20px; }
+  footer .footer-container .copyright {
+    font-size: 10px; }
+  .social-links {
     font-size: 12px; }
-  footer .footer-container .social-link {
+  .social-link {
     width: 30px;
     height: 30px;
     line-height: 30px;
     margin: 6px; }
-  footer .footer-container .copyright {
-    font-size: 10px; } }
+  .modal {
+    width: 300px;
+    min-height: 350px; }
+    .modal__subtitle {
+      font-size: 20px;
+      margin-bottom: 5px; }
+    .modal__description {
+      font-size: 12px; } }
