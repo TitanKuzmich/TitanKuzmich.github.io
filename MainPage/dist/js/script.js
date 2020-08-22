@@ -6976,7 +6976,6 @@ var workFlipCard = function workFlipCard() {
       wrappers = document.querySelectorAll('.flip__wrapper'),
       more = document.querySelectorAll('.works__wrapper__card__flip__more'),
       back = document.querySelectorAll('.works__wrapper__card__flip__back');
-  console.log(wrappers);
   more.forEach(function (item, i) {
     item.addEventListener('click', function () {
       frontSide[i].style.transform = 'rotateY(180deg)';
