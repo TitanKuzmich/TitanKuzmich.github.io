@@ -583,7 +583,7 @@ body {
   .b-c .box-circle {
     position: relative;
     width: 280px;
-    height: 400px;
+    height: 450px;
     margin: 20px 0;
     box-sizing: border-box;
     overflow: hidden;
@@ -613,7 +613,7 @@ body {
       left: 0;
       bottom: 0;
       width: 100%;
-      height: 50%;
+      height: 55%;
       text-align: center; }
       .b-c .box-circle--content h2 {
         margin: 0;
@@ -651,7 +651,7 @@ body {
   position: unset; }
   .resp-cards .box-slide {
     position: relative;
-    height: 250px;
+    height: 300px;
     background: black;
     border: 1px solid white;
     display: flex;
