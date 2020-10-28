@@ -132,12 +132,13 @@ textarea:focus {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-style: normal;
-  border: 1px solid #ffc600;
+  border: 1px solid #0089cd;
   border-radius: 1rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffed26), to(#ffb400));
-  background: linear-gradient(180deg, #ffed26 0%, #ffb400 100%);
-  -webkit-box-shadow: 1px 2px 20px 0px rgba(255, 153, 0, 0.4);
-  box-shadow: 1px 2px 20px 0px rgba(255, 153, 0, 0.4);
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0089cd), to(#00ddcd));
+  background: linear-gradient(180deg, #0089cd 0%, #00ddcd 100%);
+  -webkit-box-shadow: 1px 2px 20px 0px rgba(0, 137, 205, 0.4);
+  box-shadow: 1px 2px 20px 0px rgba(0, 137, 205, 0.4);
 }
 
 .button:hover {
@@ -145,7 +146,7 @@ textarea:focus {
 }
 
 .section_header {
-  margin-bottom: 8rem;
+  margin-bottom: 3rem;
   text-align: center;
   text-transform: uppercase;
 }
@@ -443,7 +444,7 @@ textarea:focus {
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
-  color: #ffb903;
+  color: #ff5003;
 }
 
 .glazing ul {
@@ -556,10 +557,6 @@ textarea:focus {
   background: linear-gradient(180deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-.decoration_content {
-  margin-top: 8rem;
-}
-
 .decoration_content_material img {
   margin-top: 2.5rem;
 }
@@ -600,7 +597,47 @@ textarea:focus {
 }
 
 .works img {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.works .our-work{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(0, 137, 205, 1);
+  border-radius: 10px;
+}
+
+.works .our-work .our-work--list{
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.works .our-work .our-work--list li{
+  margin-bottom: 15px;
+  font-size: 20px;
+  position: relative;
+  padding-left: 45px;
+}
+
+.works .our-work .our-work--list li p{
+  display: inline-block;
+  /*max-width: 316px;*/
+}
+
+.works .our-work .our-work--list li:before{
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 15px;
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: url(../img/glazing/check.png) no-repeat center;
+  background-size: 100%;
+  vertical-align: middle;
 }
 
 .works a[data-fancybox="gallery"] .lupa {
@@ -635,7 +672,7 @@ textarea:focus {
 }
 
 .guarantees h3 {
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 8rem;
   font-size: 1.8rem;
   font-weight: 600;
@@ -645,6 +682,7 @@ textarea:focus {
 
 .guarantees img {
   min-height: 7rem;
+  margin-top: 10px;
 }
 
 .guarantees_block:hover {
