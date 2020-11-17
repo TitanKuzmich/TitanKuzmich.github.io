@@ -17800,6 +17800,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_changeModalState__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/changeModalState */ "./src/js/modules/changeModalState.js");
 /* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/timer */ "./src/js/modules/timer.js");
 /* harmony import */ var _modules_images__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/images */ "./src/js/modules/images.js");
+/* harmony import */ var _modules_mask__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/mask */ "./src/js/modules/mask.js");
+
 
 
 
@@ -17814,6 +17816,7 @@ window.addEventListener('DOMContentLoaded', function () {
   var deadLine = '2020-12-18';
   Object(_modules_changeModalState__WEBPACK_IMPORTED_MODULE_4__["default"])(modalState);
   Object(_modules_modals__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  Object(_modules_mask__WEBPACK_IMPORTED_MODULE_7__["default"])('[name="user_phone"]');
   Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('.glazing_slider ', '.glazing_block', '.glazing_content', 'active');
   Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('.decoration_slider', '.no_click', '.decoration_content > div > div', 'after_click');
   Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('.balcon_icons', '.balcon_icons_img', '.big_img > img', 'do_image_more', 'inline-block');
@@ -17844,7 +17847,12 @@ var changeModalState = function changeModalState(state) {
       windowWidth = document.querySelectorAll('#width'),
       windowHeight = document.querySelectorAll('#height'),
       windowType = document.querySelectorAll('#view_type'),
-      windowProfile = document.querySelectorAll('.checkbox');
+      windowProfile = document.querySelectorAll('.checkbox'),
+      imageParam = document.querySelector('.img_res'),
+      widthParam = document.querySelector('.width_value'),
+      heightParam = document.querySelector('.height_value'),
+      typeParam = document.querySelector('.type_value'),
+      profileParam = document.querySelector('.profile_value');
   Object(_checkNumInputs__WEBPACK_IMPORTED_MODULE_1__["default"])('#width');
   Object(_checkNumInputs__WEBPACK_IMPORTED_MODULE_1__["default"])('#height');
 
@@ -17854,26 +17862,30 @@ var changeModalState = function changeModalState(state) {
         switch (item.nodeName) {
           case 'SPAN':
             state[prop] = i;
+            imageParam.setAttribute("src", "assets/img/modal_calc/balkon/type".concat(i + 1, ".png"));
             break;
 
           case 'INPUT':
             if (item.getAttribute('type') === 'checkbox') {
               i === 0 ? state[prop] = "Холодное" : state[prop] = "Теплое";
+              typeParam.innerHTML = state[prop];
               elem.forEach(function (box, j) {
                 box.checked = false;
 
-                if (i == j) {
+                if (i === j) {
                   box.checked = true;
                 }
               });
             } else {
               state[prop] = item.value;
+              if (prop === "width") widthParam.innerHTML = state[prop];else heightParam.innerHTML = state[prop];
             }
 
             break;
 
           case 'SELECT':
             state[prop] = item.value;
+            profileParam.innerHTML = state[prop];
             break;
         }
       });
@@ -17954,7 +17966,10 @@ var forms = function forms(state) {
   var message = {
     loading: 'Загрузка...',
     success: 'Спасибо! Скоро мы с вами свяжемся',
-    failure: 'Что-то пошло не так...'
+    failure: 'Что-то пошло не так...',
+    spinner: 'assets/img/formReaction/spinner.gif',
+    ok: 'assets/img/formReaction/ok.png',
+    fail: 'assets/img/formReaction/fail.png'
   };
 
   var postData = function postData(url, data) {
@@ -17963,22 +17978,21 @@ var forms = function forms(state) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            document.querySelector('.status').textContent = message.loading;
-            _context.next = 3;
+            _context.next = 2;
             return regeneratorRuntime.awrap(fetch(url, {
               method: "POST",
               body: data
             }));
 
-          case 3:
+          case 2:
             res = _context.sent;
-            _context.next = 6;
+            _context.next = 5;
             return regeneratorRuntime.awrap(res.text());
 
-          case 6:
+          case 5:
             return _context.abrupt("return", _context.sent);
 
-          case 7:
+          case 6:
           case "end":
             return _context.stop();
         }
@@ -17997,7 +18011,13 @@ var forms = function forms(state) {
       e.preventDefault();
       var statusMessage = document.createElement('div');
       statusMessage.classList.add('status');
-      item.appendChild(statusMessage);
+      item.parentNode.appendChild(statusMessage);
+      var statusImg = document.createElement('img');
+      var textMessage = document.createElement('div');
+      item.classList.add('animated', 'fadeOutUp');
+      setTimeout(function () {
+        item.style.display = 'none';
+      }, 400);
       var formData = new FormData(item);
 
       if (item.getAttribute('data-calc') === "end") {
@@ -18006,16 +18026,28 @@ var forms = function forms(state) {
         }
       }
 
+      statusImg.setAttribute('src', message.spinner);
+      statusImg.classList.add('animated', 'fadeInUp');
+      statusMessage.appendChild(statusImg);
+      textMessage.textContent = message.loading;
+      statusMessage.appendChild(textMessage);
       postData('assets/server.php', formData).then(function (res) {
-        //console.log(res);
-        statusMessage.textContent = message.success;
+        statusImg.setAttribute('src', message.ok);
+        textMessage.textContent = message.success;
       }).catch(function () {
-        return statusMessage.textContent = message.failure;
+        statusImg.setAttribute('src', message.fail);
+        textMessage.textContent = message.failure;
       }).finally(function () {
         clearInputs();
         setTimeout(function () {
-          statusMessage.remove();
-        }, 5000);
+          statusMessage.classList.add('animated', 'fadeOutUp');
+          setTimeout(function () {
+            statusMessage.remove();
+            item.style.display = 'block';
+            item.classList.remove('fadeOutUp');
+            item.classList.add('fadeInUp');
+          }, 400);
+        }, 2000);
       });
     });
   });
@@ -18064,6 +18096,72 @@ var images = function images() {
 
 /***/ }),
 
+/***/ "./src/js/modules/mask.js":
+/*!********************************!*\
+  !*** ./src/js/modules/mask.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var mask = function mask(selector) {
+  var setCursorPosition = function setCursorPosition(pos, elem) {
+    elem.focus();
+
+    if (elem.setSelectionRange) {
+      elem.setSelectionRange(pos, pos);
+    } else if (elem.createTextRange) {
+      var range = elem.createTextRange();
+      range.collapse(true);
+      range.moveEnd('character', pos);
+      range.moveStart('character', pos);
+      range.select();
+    }
+  };
+
+  function createMask(e) {
+    var matrix = '+7 (___) ___ __ __',
+        i = 0,
+        def = matrix.replace(/\D/g, ''),
+        val = this.value.replace(/\D/g, '');
+
+    if (def.length >= val.length) {
+      val = def;
+    }
+
+    this.value = matrix.replace(/./g, function (a) {
+      return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a;
+    });
+
+    if (e.type === 'blur') {
+      if (this.value.length == 2) {
+        this.value = '';
+      }
+    } else {
+      setCursorPosition(this.value.length, this);
+    }
+  }
+
+  var inputs = document.querySelectorAll(selector);
+  inputs.forEach(function (input) {
+    input.addEventListener('input', createMask);
+    input.addEventListener('focus', createMask);
+    input.addEventListener('blur', createMask);
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (mask);
+
+/***/ }),
+
 /***/ "./src/js/modules/modals.js":
 /*!**********************************!*\
   !*** ./src/js/modules/modals.js ***!
@@ -18105,7 +18203,7 @@ var modals = function modals() {
       });
       modal.style.display = "none";
       document.body.style.overflow = "";
-      document.body.style.marginRight = "0px"; // document.body.classList.remove('modal-open');
+      document.body.style.marginRight = "0px";
     });
     modal.addEventListener('click', function (e) {
       if (e.target === modal && closeClickOverlay) {
@@ -18142,7 +18240,8 @@ var modals = function modals() {
   bindModal('.phone_link', '.popup', '.popup_close');
   bindModal('.popup_calc_btn', '.popup_calc', '.popup_calc_close');
   bindModal('.popup_calc_button', '.popup_calc_profile', ".popup_calc_profile_close", false);
-  bindModal('.popup_calc_profile_button', '.popup_calc_end', '.popup_calc_end_close', false); //showModalByTime('.popup', 60000);
+  bindModal('.popup_calc_profile_button', '.popup_calc_res', '.popup_calc_res_close', false);
+  bindModal('.popup_calc_res_button', '.popup_calc_end', '.popup_calc_end_close', false); //showModalByTime('.popup', 60000);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (modals);

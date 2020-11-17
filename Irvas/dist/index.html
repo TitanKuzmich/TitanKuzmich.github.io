@@ -975,11 +975,11 @@
             <h2>Калькулятор</h2>
             <h3>Выберите тип остекления <br>и его профиль</h3>
             <select class="form-control" name="view" id="view_type">
-                <option value="tree">Деревянное остекление</option>
-                <option value="aluminum">Алюминиевое остекление</option>
-                <option value="plastic">Остекление пластиковыми рамами</option>
-                <option value="french">Панорамное остекление</option>
-                <option value="overhang">Остекление с выносом</option>
+                <option value="Деревянное остекление">Деревянное остекление</option>
+                <option value="Алюминиевое остекление">Алюминиевое остекление</option>
+                <option value="Остекление пластиковыми рамами">Остекление пластиковыми рамами</option>
+                <option value="Панорамное остекление">Панорамное остекление</option>
+                <option value="Остекление с выносом">Остекление с выносом</option>
             </select>
             <img src="assets/img/modal_calc/icon_cold.png" alt="">
             <label>
@@ -995,6 +995,25 @@
             </label>
 
             <button class="button popup_calc_profile_button">Далее</button>
+        </div>
+    </div>
+</div>
+
+<div class="popup_calc_res" data-modal>
+    <div class="popup_dialog">
+        <div class="popup_calc_res_content text-center">
+            <button type="button" class="popup_calc_res_close"><strong>&times;</strong></button>
+            <h2>Выбранные параметры</h2>
+            <div class="img_param">
+                <img class="img_res" src="" alt="Тип">
+            </div>
+            <div class="num_params">
+                <div class="width">Ширина: <span class="width_value value_param"></span></div>
+                <div class="height">Высота: <span class="height_value value_param"></span></div>
+                <div class="type">Тип остекления: <span class="type_value value_param"></span></div>
+                <div class="profile">Тип профиля: <span class="profile_value value_param"></span></div>
+            </div>
+            <button class="button popup_calc_res_button rez_btn">Далее</button>
         </div>
     </div>
 </div>

@@ -9,11 +9,13 @@ const forms = (state) => {
     const message = {
         loading: 'Загрузка...',
         success: 'Спасибо! Скоро мы с вами свяжемся',
-        failure: 'Что-то пошло не так...'
+        failure: 'Что-то пошло не так...',
+        spinner: 'assets/img/formReaction/spinner.gif',
+        ok: 'assets/img/formReaction/ok.png',
+        fail: 'assets/img/formReaction/fail.png'
     };
 
     const postData = async (url, data) => {
-        document.querySelector('.status').textContent = message.loading;
         let res = await fetch(url, {
             method: "POST",
             body: data
@@ -31,10 +33,17 @@ const forms = (state) => {
     form.forEach(item => {
         item.addEventListener('submit', (e) => {
             e.preventDefault();
-
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status');
-            item.appendChild(statusMessage);
+            item.parentNode.appendChild(statusMessage);
+
+            let statusImg = document.createElement('img');
+            let textMessage = document.createElement('div');
+
+            item.classList.add('animated', 'fadeOutUp');
+            setTimeout(() => {
+                item.style.display = 'none';
+            }, 400);
 
             const formData = new FormData(item);
             if (item.getAttribute('data-calc') === "end") {
@@ -42,18 +51,32 @@ const forms = (state) => {
                     formData.append(key, state[key]);
                 }
             }
+            statusImg.setAttribute('src', message.spinner);
+            statusImg.classList.add('animated', 'fadeInUp');
+            statusMessage.appendChild(statusImg);
 
+            textMessage.textContent = message.loading;
+            statusMessage.appendChild(textMessage);
             postData('assets/server.php', formData)
                 .then(res => {
-                    //console.log(res);
-                    statusMessage.textContent = message.success;
+                    statusImg.setAttribute('src', message.ok);
+                    textMessage.textContent = message.success;
                 })
-                .catch(() => statusMessage.textContent = message.failure)
+                .catch(() => {
+                    statusImg.setAttribute('src', message.fail);
+                    textMessage.textContent = message.failure;
+                })
                 .finally(() => {
                     clearInputs();
                     setTimeout(() => {
-                        statusMessage.remove();
-                    }, 5000);
+                        statusMessage.classList.add('animated', 'fadeOutUp');
+                        setTimeout(() => {
+                            statusMessage.remove();
+                            item.style.display = 'block';
+                            item.classList.remove('fadeOutUp');
+                            item.classList.add('fadeInUp');
+                        }, 400);
+                    }, 2000);
                 });
         });
     });
