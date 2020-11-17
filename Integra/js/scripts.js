@@ -168,7 +168,7 @@ const modals = () => {
                 })
 
                 modal.style.display = "block";
-                document.body.style.overflow = "hidden";
+                // document.body.style.overflow = "hidden";
                 document.body.style.marginRight = `${scroll}px`;
             });
         });
@@ -180,7 +180,7 @@ const modals = () => {
                 item.style.display = 'none';
             })
             modal.style.display = "none";
-            document.body.style.overflow = "";
+            // document.body.style.overflow = "";
             document.body.style.marginRight = `0px`;
         });
 
@@ -192,7 +192,7 @@ const modals = () => {
                     item.style.display = 'none';
                 })
                 modal.style.display = "none";
-                document.body.style.overflow = "";
+                // document.body.style.overflow = "";
                 document.body.style.marginRight = `0px`;
             }
         });
@@ -403,87 +403,9 @@ $(document).ready(function() {
         autoplay: true,
         autoplaySpeed: 3000,
         fade: true
-    });	
-	
-	$('.case-study-image-carousel').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        speed: 500,
-        infinite: true,
-        autoplay: false,
-        autoplaySpeed: 5000,
-        fade: false
-    });	
-
+    });
 });
 
-
-
-window.onload = function (){
-	// trigger scroll animate
-	if ($(window).scrollTop() > 10 && animateStats == 0){
-		 animateSt();
-	}
-	$(window).scroll(function (){
-		if ($(window).scrollTop() > 10 && animateStats == 0){
-			 animateSt();
-		}
-	});
-	
-}
-
-/* animate stats */
-var animateStats = 0;
-var stat1 = 60; // procents
-var stat2 = 1; // month
-var stat3 = 5; // years
-var stat4 = 5; // models
-var stat5 = 30; // investors
-var stat6 = 19; // objects
-var stat7 = 48; // profitability
-
-var ctr1 = 0; // procents
-var ctr2 = 0; // month
-var ctr3 = 0; // years
-var ctr4 = 0; // models
-var ctr5 = 0; // investors
-var ctr6 = 0; // objects
-var ctr7 = 0; // profitability
-function animateSt(){
-	clearTimeout(t);
-	animateStats = 1;
-	if (document.getElementById('stat1').innerHTML*1 < stat1){
-		ctr1 = ctr1 + 3;
-		document.getElementById('stat1').innerHTML = Math.round(ctr1);
-	}
-	if (document.getElementById('stat2').innerHTML*1 < stat2){
-		ctr2 = ctr2 + 0.09;
-		if (ctr2 >= 0.6){ctr2 = stat2;}
-		document.getElementById('stat2').innerHTML = Math.round(ctr2*100)/100;
-	}
-	if (document.getElementById('stat3').innerHTML*1 < stat3){
-		ctr3 = ctr3 + 0.14;
-		document.getElementById('stat3').innerHTML = Math.round(ctr3);
-	}
-	if (document.getElementById('stat4').innerHTML*1 < stat4){
-		ctr4 = ctr4 + 0.12;
-		document.getElementById('stat4').innerHTML = Math.round(ctr4);
-	}
-	if (document.getElementById('stat5').innerHTML*1 < stat5){
-		ctr5 = ctr5 + 1;
-		document.getElementById('stat5').innerHTML = Math.round(ctr5);
-	}
-	if (document.getElementById('stat6').innerHTML*1 < stat6){
-		ctr6 = ctr6 + 0.4;
-		document.getElementById('stat6').innerHTML = Math.round(ctr6);
-	}
-	if (document.getElementById('stat7').innerHTML*1 < stat7){
-		ctr7 = ctr7 + 0.9;
-		document.getElementById('stat7').innerHTML = Math.round(ctr7);
-	}
-	var t = setTimeout('animateSt()',70);	
-}
-/* end animate stats */
 
 
 // equalise height

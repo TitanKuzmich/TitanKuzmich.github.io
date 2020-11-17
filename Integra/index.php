@@ -21,12 +21,12 @@ $current_time = date("H");
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script src="js/wow.min.js"></script>
-    <link rel="apple-touch-icon" href="fav/favicon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="fav/favicon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="fav/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon.png">
-    <link rel="manifest" href="fav/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <link rel="manifest" href="images/favicon.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="fav/favicon.png">
     <meta name="theme-color" content="#ffffff">
@@ -48,8 +48,7 @@ $current_time = date("H");
                 <ul id="menu" onClick="">
                     <li><a href="#" onClick="document.getElementById('show-menu').checked = false;">В начало</a></li>
                     <li><a href="#about" onClick="document.getElementById('show-menu').checked = false;">О нас</a></li>
-                    <li><a href="#strategies" onClick="document.getElementById('show-menu').checked = false;">Механизмы
-                            генерации дохода</a></li>
+                    <li><a href="#strategies" onClick="document.getElementById('show-menu').checked = false;">Наши предложения по недвижимости</a></li>
                     <li><a href="#contacts" onClick="document.getElementById('show-menu').checked = false;">Контакты</a>
                     </li>
                 </ul>
@@ -65,35 +64,10 @@ $current_time = date("H");
         <source src="images/video.mp4" type="video/mp4">
     </video>
     <div class="video_overlay">
-        <?php if ($current_time < 20 and $current_time >= 10): ?>
-            <div class="call_wrapper title_call">Звоните прямо сейчас!
-                <div class="contact-content">
-                    <div class="office_title">
-                        <p>
-                            <a href="tel:84951288119">8(495) 128-81-19</a>
-                            <a href="tel:89652099116">8(965) 209-91-16</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="call_wrapper call_wrapper__right title_call">
-                Или же просто оставьте заявку<br>и мы Вам перезвоним
-                <br>
-                <button class="btn-call-modal">оставить заявку</button>
-            </div>
-        <?php else:?>
-            <div class="call_wrapper call_wrapper__right title_call">
-                Работаем с 10:00 до 20:00
-                <br>
-                Оставте заявку и мы Вам перезвоним
-                <button class="btn-call-modal">оставить заявку</button>
-            </div>
-        <?php endif; ?>
-
         <div class="main_title">
             <h2>ИНВЕСТИЦИИ В НЕДВИЖИМОСТЬ</h2>
-            <h4 class="subtitle">Доверительное управление недвижимостью в Москве</h4>
-            <button class="btn-call-modal less641px">оставить заявку</button>
+            <h4 class="subtitle">Зарабатывайте от 10% до 48% годовых при полной защите вашего капитала</h4>
+            <button class="btn-call-modal big-btn">узнать подробнее</button>
             <a href="#about"><img class="darr" src="images/icon-darr.svg" alt=""/></a>
         </div>
     </div>
@@ -104,247 +78,307 @@ $current_time = date("H");
 <section class="stats">
     <div class="container">
         <ul class="stats-icons">
+            <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" onClick="">
+
+                <strong>Высокая доходность</strong>
+                <span>От 10% до 60% годовых в зависимости от выбранной модели</span>
+            </li>
+            <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" onClick="">
+
+                <strong>Скорость получения дохода</strong>
+                <span>Уже через 1-2 месяца вы получите первые выплаты</span>
+            </li>
             <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" onClick="">
 
-                <strong>До <span id="stat1">0</span></strong>
-                <span>годовых</span>
+                <strong>Пассивный доход</strong>
+                <span>Вы получает доход полностью пассивно, все операционную деятельность мы берем на себя</span>
+            </li>
+            <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s" onClick="">
+
+                <strong>Полная защита ваших средств</strong>
+                <span>Ваши средства защищены рядом гарантий: право собственности, залог, личное поручительство</span>
             </li>
             <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" onClick="">
 
-                <strong><span id="stat2">0</span></strong>
-                <span>месяц спустя вы<br>получаете первые выплаты</span>
+                <strong>Различные стратегии</strong>
+                <span>Для максимально надежного сохранения капитала, для приятного пассивного дохода, для получения сверхприбыли</span>
             </li>
-            <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s" onClick="">
+            <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" onClick="">
 
-                <strong><span id="stat3">0</span> лет</strong>
-                <span>в среднем договор<br>с собственником</span>
-            </li>
-            <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.3s" onClick="">
-
-                <strong><span id="stat4">0</span></strong>
-                <span>моделей инвестиций<br>в недвижимость</span>
-            </li>
-            <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.6s" onClick="">
-
-                <strong><span id="stat5">0</span>+</strong>
-                <span>инвесторов</span>
-            </li>
-            <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s" onClick="">
-
-                <strong><span id="stat6">0</span></strong>
-                <span>обьектов в управлении</span>
-            </li>
-            <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.6s" onClick="">
-
-                <strong><span id="stat7">0</span>%</strong>
-                <span>cредняя доходность</span>
+                <strong>Подойдет каждому</strong>
+                <span>Различный порог входа: от 500 000 для инвестиций в субаренду до 500 000 000 для покупки зданий</span>
             </li>
         </ul>
     </div>
 </section>
+
 <main id="about">
     <div class="container">
         <h3><span class="line">О нас</span></h3>
     </div>
     <div class="container about-panel">
         <div class="about-image wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
-            <ul class="about-image-carousel">
-                <li>
-                    <img class="about-img" src="images/afterObj/11after.jpeg" alt="">
-                    <div class="slideshow_overlay">Стоимость аренды: 40000</div>
-                    <div class="overlay_vertical"></div>
-                </li>
-
-                <li>
-                    <img class="about-img" src="images/afterObj/27after.jpg" alt="">
-                    <div class="slideshow_overlay">Стоимость аренды: 50000</div>
-                    <div class="overlay_vertical"></div>
-                </li>
-
-                <li>
-                    <img class="about-img" src="images/afterObj/after_kosmo331.jpg" alt="">
-                    <div class="slideshow_overlay">Стоимость аренды: 55000</div>
-                    <div class="overlay_vertical"></div>
-                </li>
-
-                <li>
-                    <img class="about-img" src="images/afterObj/44after.jpeg" alt="">
-                    <div class="slideshow_overlay">Стоимость аренды: 35000</div>
-                    <div class="overlay_vertical"></div>
-                </li>
-
-                <li>
-                    <img class="about-img" src="images/afterObj/55after.jpeg" alt="">
-                    <div class="slideshow_overlay">Стоимость аренды: 50000</div>
-                    <div class="overlay_vertical"></div>
-                </li>
-            </ul>
+            <div class="about-image--container">
+                <img src="images/building.png" alt="" class="about-image--source">
+            </div>
         </div>
 
         <div class="about-content wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
             <h3><span class="title wow typewriter" data-delay="1300">Как мы работаем?</span></h3>
-            <div class="columns">
-                <div class="col">
-                    <p>Мы берем финансирование у инвестора и вкладываем исходя из выбранного им предложения по работе с
-                        недвижимостью,
-                        это может быть: субаренда, покупка недвижимости, лизинг и другие наши модели которые описаны
-                        ниже.
-                        Каждая из моделей имеет разную доходность и разный порог входа для инвестора.
-                        Модели инвестиций в недвижимость в нашей компании имеют минимальные риски, так как они
-                        предусмотрены за счет анализа рынка
-                        и опыта нашей управляющей компании.</p>
-                </div>
+            <div class="about-text">
+                Мы - управляющая компания INTEGRA. Наша цель – получить максимальную доходность из объектов недвижимости в управлении для себя и для инвестора.
+                <br>
+                Для этого мы разрабатываем и реализуем различные инвестиционные программы: лизинг недвижимости, субарендный бизнес, выкуп с торгов, деление на студии.
+                <br><br>
+                В рамках данных проектов инвестор может реализовать любую стратегию:
+                <br>
+                - максимально надежно сохранить капитал
+                <br>
+                - получать значительный пассивный доход, имея при этом ряд гарантий
+                <br>
+                - рискнуть и получить сверхприбыль
+                <br><br>
+                Мы берем на себя всю операционную деятельность по управлению недвижимостью – поиск объекта, проверка юридической чистоты, сопровождение сделки купли-продажи,
+                капитальный или косметический ремонт, поиск и проверка клиентов, контроль выплат, дальнейшее управление квартирой и решение всех возникающих вопросов.
+                Инвестор получает доход полностью пассивно, имея при этом полную защищенность своих средств.
             </div>
         </div>
     </div>
 </main>
-<section id="strategies" class="strategies wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+
+<section id="strategies" class="strategies">
 
     <div class="container">
 
         <h3 class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s"
             style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeIn;">
-            <span class="line lc">МЕХАНИЗМЫ ГЕНЕРАЦИИ ДОХОДА</span>
+            <span class="line lc">Наши инвестиционные предложения</span>
         </h3>
-        <div class="mechanism">
-            <div class="mechanism-item wow fadeInDown" data-wow-duration="1s" data-wow-delay="1.5s">
-                <div class="strategies-header">
-                    <div class="">
-                        <div class="strategies_icons"><img src="images/icon-private-equity.svg" alt=""></div>
-                        <span>
-                            <span class="strategies_subheaders">СУБАРЕНДА НЕДВИЖИМОСТИ</span>
-                            <div class="strategies-content">
-                                <p>Цель: преумножение капитала, высокий пассивный доход
-                                    Доходность: высокая – от 42 до 48% годовых
-                                    Порог входа: низкий от 500.000 рублей
-                                    Скорость получения дохода: высокая, уже через 1 месяц</p>
-                                <p>Обеспечение: залог или право собственности отсутствуют
-                                    Гарантии: переуступка прав аренды или личное поручительство
-                                    Срок инвестирования: от 1 до 3 лет</p>
-                                <p>Мы арендуем на долгий срок от 1 до 7 лет квартиры по цене значительно ниже рыночной
-                                    – без отделки, без ремонта, после потопа или пожара. Далее в данных квартирах проводятся косметический или капитальные
-                                    ремонтные работы для последующей сдачи в субаренду (посуточно и на долгий срок) в 2-3 раза дороже.</p>
-                            </div>
-                        </span>
+
+        <div class="offers">
+            <div class="offers_item">
+                <div class="offers_content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="offers_title">
+                        <div class="offers_title__icon"><img src="images/icon-private-equity.svg" alt="" class="offers_title__icon-source"></div>
+                        <div class="offers_title__text">Субаренда жилой недвижимости</div>
                     </div>
-                    <span class="strategies_read_more">ПОДРОБНЕЕ &gt;</span>
-                    <span class="strategies_read_less">СКРЫТЬ ×</span>
-                </div>
-
-            </div>
-
-            <div class="mechanism-item wow fadeInDown" data-wow-duration="1s" data-wow-delay="2s">
-                <div class="strategies-header">
-                    <div class="">
-                        <div class="strategies_icons"><img src="images/icon-calendar.svg" style="opacity: 0.3;" alt="">
+                    <div class="offers_text">
+                        <div class="offers_text__goals">
+                            <b>Цель:</b> преумножение капитала, высокий пассивный доход<br>
+                            <b>Доходность:</b> высокая – от <b>42</b> до <b>48%</b> годовых<br>
+                            <b>Порог входа:</b> низкий от <b>500.000</b> рублей<br>
+                            <b>Скорость получения дохода:</b> высокая, уже через <b>1</b> месяц<br>
+                            <b>Обеспечение</b>: залог или право собственности отсутствуют<br>
+                            <b>Гарантии:</b> переуступка прав аренды или личное поручительство<br>
+                            <b>Срок инвестирования:</b> от <b>1</b> до <b>3</b> лет
                         </div>
-                        <span>
-                            <span class="strategies_subheaders">ДОЛГОСРОЧНАЯ И ПОСУТОЧНАЯ АРЕНДА</span>
-                            <div class="strategies-content">
-                                <p>Цель: сохранение капитала
-                                    Доходность: низкая – до 10% годовых
-                                    Порог входа: от 5.000.000 рублей
-                                    Скорость получения дохода: средняя, через 3 месяца</p>
-                                <p>Гарантии: право собственности
-                                    Срок инвестирования: не ограничен
-                                    Квартира находится в собственности у инвестора.
-                                    INTEGRA, как управляющая компания, сдает данный объект посуточно или на долгий срок.
-                                    При необходимости может быть произведено деление на студии или ремонт.</p>
-                            </div>
-                        </span>
-                    </div>
-                    <span class="strategies_read_more">ПОДРОБНЕЕ &gt;</span>
-                    <span class="strategies_read_less">СКРЫТЬ ×</span>
-                </div>
-            </div>
-
-            <div class="mechanism-item wow fadeInDown" data-wow-duration="1s" data-wow-delay="2.5s">
-                <div class="strategies-header">
-                    <div class="">
-                        <div class="strategies_icons"><img src="images/icon-opportunity.svg" alt=""></div>
-                        <span>
-                            <span class="strategies_subheaders">ПЕРЕПРОДАЖА НЕДВИЖИМОСТИ</span>
-                            <div class="strategies-content">
-                                <p>Цель: заработок на разовой сделке
-                                    Доходность: от 15% до 60% со сделки
-                                    Порог входа: от 7.000.000 рублей
-                                    Скорость получения дохода: средняя, через 3-6 месяцев единоразово</p>
-                                <p>Гарантии: право собственности
-                                    Срок инвестирования: 3-6 месяцев
-                                    Покупка или выкуп с торгов квартир по цене ниже рыночной стоимости,
-                                    проведение в них ремонтных работ для последующей перепродажи с наценкой.</p>
-                            </div>
-                        </span>
-                    </div>
-                    <span class="strategies_read_more">ПОДРОБНЕЕ &gt;</span>
-                    <span class="strategies_read_less">СКРЫТЬ ×</span>
-                </div>
-            </div>
-
-            <div class="mechanism-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
-                <div class="strategies-header">
-                    <div class="">
-                        <div class="strategies_icons"><img src="images/icon-lease.png" style="opacity: 0.3;" alt="">
+                        <div class="offers_text__general">
+                            Мы арендуем на долгий срок от <b>1</b> до <b>7</b> лет квартиры <b>по цене значительно ниже</b> рыночной
+                            – без отделки, без ремонта, после потопа или пожара. Далее в данных квартирах проводятся косметический или капитальные
+                            ремонтные работы для последующей сдачи в субаренду (посуточно и на долгий срок) в <b>2-3 раза дороже</b>.
+                            <br>
+                            Данная модель идеально подойдет инвесторам, чья цель – получение <b>существенного пассивного дохода</b>, имея при этом ряд гарантий.
+                            Благодаря низкому порогу входа инвестор имеет возможность «попробовать» и, в случае, если его все устроит, продолжить инвестиции уже с большей суммой.
                         </div>
-                        <span>
-                            <span class="strategies_subheaders">ЛИЗИНГ НЕДВИЖИМОСИТИ</span>
-                            <div class="strategies-content">
-                                <p>Цель: преумножение капитала с максимальной защищенностью
-                                    Доходность: 15% годовых с возвратом тела
-                                    Порог входа: от 5.000.000 рублей
-                                    Скорость получения дохода: быстрая, через 2 месяца</p>
-                                <p>Гарантии: право собственности
-                                    Срок инвестирования: от 3 до 5 лет (и более, в случае невыкупа)
-                                    Сдача квартиры или дома в аренду с правом выкупа, что является альтернативой ипотеке.
-                                    Клиент выплачивает одновременно и арендный платеж и выкупной.
-                                    Тем самым арендный платеж составляет до 200 000 в месяц.</p>
-                                <p>После выкупа объекта, он переходит в собственность арендатора.
-                                    В случае невыплат, объект остается в собственности инвестора.</p>
-                            </div>
-                        </span>
+                        <button class="btn-call-modal">узнать подробнее</button>
                     </div>
-                    <span class="strategies_read_more">ПОДРОБНЕЕ &gt;</span>
-                    <span class="strategies_read_less">СКРЫТЬ ×</span>
+                </div>
+                <div class="offers_image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+
                 </div>
             </div>
 
-            <div class="mechanism-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
-                <div class="strategies-header">
-                    <div class="">
-                        <div class="strategies_icons"><img src="images/icon-warehouse.png" style="opacity: 0.3;" alt="">
+            <div class="offers_item">
+                <div class="offers_image wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+
+                </div>
+                <div class="offers_content wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="offers_title">
+                        <div class="offers_title__icon"><img src="images/icon-calendar.svg" alt="" class="offers_title__icon-source"></div>
+                        <div class="offers_title__text">Покупка недвижимости для сдачи в посуточную или долгосрочную аренду</div>
+                    </div>
+                    <div class="offers_text">
+                        <div class="offers_text__goals">
+                            <b>Цель:</b> сохранение капитала<br>
+                            <b>Доходность:</b> низкая – до <b>10%</b> годовых<br>
+                            <b>Порог входа:</b> от <b>5.000.000</b> рублей<br>
+                            <b>Скорость получения дохода: </b>средняя, через <b>3</b> месяца<br>
+                            <b>Гарантии:</b> право собственности<br>
+                            <b>Срок инвестирования:</b> не ограничен
                         </div>
-                        <span>
-                            <span class="strategies_subheaders">КОММЕРЧЕСКАЯ НЕДВИЖИМОСТЬ</span>
-                            <div class="strategies-content">
-                                <p>Цель: сохранение капитала
-                                    Доходность: низкая – до 12% годовых
-                                    Порог входа: от 5.000.000 рублей
-                                    Скорость получения дохода: средняя, через 3 месяца</p>
-                                <p>Гарантии: право собственности
-                                    Срок инвестирования: не ограничен
-                                    Виды недвижимости: торговые помещения, складские помещения, здания
-                                    Сдача торговых или складских помещений в аренду;</p>
-                            </div>
-                        </span>
+                        <div class="offers_text__general">
+                            Для тех инвесторов, кто желает <b>максимально надежно</b> и на <b>долгий срок</b> сохранить свой капитал,
+                            мы предлагаем «классический» вариант инвестиций в недвижимость – покупка квартиры или апартаментов
+                            для последующей сдачи посуточно или на долгий срок. <br>
+                            <b>Всю операционную деятельность</b> по подбору наиболее ликвидного объекта, проверке юридической чистоты,
+                            совершению сделки купли-продажи, поиску и проверке клиентов, а также последующему управлению объектом <b>мы берем на себя</b>.
+                        </div>
+                        <button class="btn-call-modal">узнать подробнее</button>
                     </div>
-                    <span class="strategies_read_more">ПОДРОБНЕЕ &gt;</span>
-                    <span class="strategies_read_less">СКРЫТЬ ×</span>
                 </div>
             </div>
 
-            <div class="mechanism-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.8s">
-                <div class="strategies-header">
-                    <div class="strategies_subheaders give_data">
-                        Чтобы узнать более подробную информацию о
-                        рычагах генерации денежного потока просто
-                        оставьте свои контактные данные
+            <div class="offers_item">
+                <div class="offers_content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="offers_title">
+                        <div class="offers_title__icon"><img src="images/icon-lease.png" alt="" class="offers_title__icon-source"></div>
+                        <div class="offers_title__text">Лизинг недвижимости для физических лиц</div>
+                    </div>
+                    <div class="offers_text">
+                        <div class="offers_text__goals">
+                            <b>Цель:</b> преумножение капитала с максимальной защищенностью<br>
+                            <b>Доходность:</b> от <b>13%</b> до <b>25%</b> годовых<br>
+                            <b>Порог входа:</b> от <b>3.500.000</b> рублей<br>
+                            <b>Скорость получения дохода:</b> быстрая, через <b>1-1.5</b> месяца<br>
+                            <b>Гарантии:</b> право собственности<br>
+                            <b>Срок инвестирования:</b> от <b>3</b> до <b>5</b> лет (и более, в случае невыкупа)
+                        </div>
+                        <div class="offers_text__general">
+                            Лизинг или, по-другому, аренда недвижимости с правом выкупа.
+                            <br>По данной программе клиент имеет возможность приобрести жилье, выплачивая в течение нескольких лет арендные и выкупные платежи,
+                            что для него является альтернативой банковской ипотеке.
+                            <br>Ежемесячно инвестора получает от <b>150 000 рублей</b>, поскольку клиент
+                            выплачивает как проценты, так и тело инвестиции. В течение всего срока выкупа квартира находится в собственности инвестора
+                            и только после совершения <b>последнего</b> платежа права собственности переходит арендатору.
+                        </div>
+                        <button class="btn-call-modal">узнать подробнее</button>
                     </div>
                 </div>
-                <button class="btn-call-modal btn-call-modal__centered">Заказать обратный звонок</button>
+                <div class="offers_image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+
+                </div>
+            </div>
+
+            <div class="offers_item">
+                <div class="offers_image wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+
+                </div>
+                <div class="offers_content wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="offers_title">
+                        <div class="offers_title__icon"><img src="images/icon-opportunity.svg" alt="" class="offers_title__icon-source"></div>
+                        <div class="offers_title__text">Выкуп недвижимости с торгов для последующей продажи </div>
+                    </div>
+                    <div class="offers_text">
+                        <div class="offers_text__goals">
+                            <b>Цель:</b> заработок на разовой сделке<br>
+                            <b>Доходность:</b> от <b>15%</b> до <b>60%</b> со сделки<br>
+                            <b>Порог входа:</b> от <b>5.000.000</b> рублей<br>
+                            <b>Скорость получения дохода: </b>средняя, через <b>3-6</b> месяцев единоразово<br>
+                            <b>Гарантии:</b> право собственности<br>
+                            <b>Срок инвестирования: 3-6</b> месяцев
+                        </div>
+                        <div class="offers_text__general">
+                            Покупка недвижимости с торгов позволяет приобрести жилую и коммерческую недвижимость со скидкой <b>10%-40%</b> для дальнейшей ее реализации различными путями:
+                            как перепродажа и заработок с разовой сделки, так и сдача в аренду. <br>
+                            Наша управляющая компания работает преимущественно с торгами города Москвы, тем самым оберегая наших инвесторов от возможных проблем, связанных с торгами по банкротству.
+                            Для участия в торгах необходимо внесение залога в размере <b>10% от стоимости лота</b>.
+                        </div>
+                        <button class="btn-call-modal">узнать подробнее</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offers_item">
+                <div class="offers_content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="offers_title">
+                        <div class="offers_title__icon"><img src="images/icon-warehouse.png" alt="" class="offers_title__icon-source"></div>
+                        <div class="offers_title__text">Покупка коммерческой недвижимости</div>
+                    </div>
+                    <div class="offers_text">
+                        <div class="offers_text__goals">
+                            <b>Цель:</b> сохранение капитала<br>
+                            <b>Доходность:</b> низкая – до <b>12%</b> годовых<br>
+                            <b>Порог входа:</b> от <b>5.000.000</b> рублей<br>
+                            <b>Скорость получения дохода:</b> средняя, через <b>3</b> месяца<br>
+                            <b>Гарантии:</b> право собственности<br>
+                            <b>Срок инвестирования:</b> не ограничен
+                        </div>
+                        <div class="offers_text__general">
+                            Покупка коммерческой недвижимости позволяет <b>максимально надежно</b> сохранить свой капитал, имея при этом <b>гарантированный пассивный доход</b>,
+                            поскольку многие арендаторы являются якорными и арендуют помещения на несколько лет. <br>
+                            Сотрудничество возможно по различным типам недвижимости: торговые площади, складские помещения, офисы, отдельные здания.
+                        </div>
+                        <button class="btn-call-modal">узнать подробнее</button>
+                    </div>
+                </div>
+                <div class="offers_image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+
+                </div>
+            </div>
+
+            <div class="offers_item">
+                <div class="offers_image wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+
+                </div>
+                <div class="offers_content wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="offers_title">
+                        <div class="offers_title__icon"><img src="images/icon-opportunity.svg" alt="" class="offers_title__icon-source"></div>
+                        <div class="offers_title__text">Беззалоговый займ </div>
+                    </div>
+                    <div class="offers_text">
+                        <div class="offers_text__goals">
+                            <b>Цель:</b> получение максимальной прибыли<br>
+                            <b>Доходность:</b>  высокая - <b>60%</b> годовых<br>
+                            <b>Порог входа:</b> от <b>400 000</b> рублей<br>
+                            <b>Гарантии:</b> личное поручительство<br>
+                            <b>Выплаты:</b> ежемесячные с возвратом тела в конце срока
+                        </div>
+                        <div class="offers_text__general">
+                            Помимо сотрудничества с инвесторами по объектам недвижимости, которые мы берем в управление, наша компания предлагает инвесторам работу
+                            по программе займа <b>под 60% годовых</b>. <br>
+                            Средства используются для масштабирования бизнеса, а именно для увеличения рекламных бюджетов и привлечения большего количества объектов у правление.
+                            В качестве гарантии может выступать личное поручительство генерального директора.
+                        </div>
+                        <button class="btn-call-modal">узнать подробнее</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offers_item">
+                <div class="offers_content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="offers_title">
+                        <div class="offers_title__icon"><img src="images/icon-warehouse.png" alt="" class="offers_title__icon-source"></div>
+                        <div class="offers_title__text">Покупка квартиры для деления на студии</div>
+                    </div>
+                    <div class="offers_text">
+                        <div class="offers_text__goals">
+                            <b>Цель:</b> сохранение капитала<br>
+                            <b>Доходность:</b> низкая – до <b>12%</b> годовых<br>
+                            <b>Порог входа:</b> от <b>5.000.000</b> рублей<br>
+                            <b>Скорость получения дохода:</b> средняя, через <b>3</b> месяца<br>
+                            <b>Гарантии:</b> право собственности<br>
+                            <b>Срок инвестирования:</b> не ограничен
+                        </div>
+                        <div class="offers_text__general">
+                            Покупка недвижимости для деления на студии является одним из самых <b>популярных</b> на сегодняшний день способов инвестиций.
+                            <br>
+                            Однако популярность зачастую значит перенасыщенность рынка.
+                            Конкурировать с застройщиками и крупными девелопперами через 1-2 года станет все сложнее, которые предлагают студии с отдельными кадастрами.
+                            <br>
+                            Поэтому мы предлагаем инвесторам деление на студии с дальнейшей посуточной сдачи или подбор объектов, где возможно выведение отдельных кадастров.
+                            <br>
+                            <b>Всю деятельность</b> по подбору объекта, проведению инвесторского ремонта, согласования перепланировок, выведению кадастров и дальнейшему управлению <b>мы берем на себя</b>.
+                        </div>
+                        <button class="btn-call-modal">узнать подробнее</button>
+                    </div>
+                </div>
+                <div class="offers_image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+
+                </div>
             </div>
         </div>
-    </div>
 
+        <div class="divider wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s"></div>
+
+        <div class="offers_call-modal wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">
+            <div class="offers_call-header">
+                <div class="offers_title__text offers_text-center">
+                    Если у вас остались вопросы по инвестиционным программам, оставьте заявку и мы подробно на них ответим!
+                </div>
+            </div>
+            <button class="btn-call-modal btn-call-modal__centered">Заказать обратный звонок</button>
+        </div>
+    </div>
 </section>
 <section id="contacts" class="contact-map">
     <div class="container">
