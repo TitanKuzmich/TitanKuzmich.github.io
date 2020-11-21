@@ -2946,6 +2946,43 @@ $({ target: PROMISE, stat: true, forced: INCORRECT_ITERATION }, {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/modules/es.regexp.to-string.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/core-js/modules/es.regexp.to-string.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var redefine = __webpack_require__(/*! ../internals/redefine */ "./node_modules/core-js/internals/redefine.js");
+var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
+var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
+var flags = __webpack_require__(/*! ../internals/regexp-flags */ "./node_modules/core-js/internals/regexp-flags.js");
+
+var TO_STRING = 'toString';
+var RegExpPrototype = RegExp.prototype;
+var nativeToString = RegExpPrototype[TO_STRING];
+
+var NOT_GENERIC = fails(function () { return nativeToString.call({ source: 'a', flags: 'b' }) != '/a/b'; });
+// FF44- RegExp#toString has a wrong name
+var INCORRECT_NAME = nativeToString.name != TO_STRING;
+
+// `RegExp.prototype.toString` method
+// https://tc39.github.io/ecma262/#sec-regexp.prototype.tostring
+if (NOT_GENERIC || INCORRECT_NAME) {
+  redefine(RegExp.prototype, TO_STRING, function toString() {
+    var R = anObject(this);
+    var p = String(R.source);
+    var rf = R.flags;
+    var f = String(rf === undefined && R instanceof RegExp && !('flags' in RegExpPrototype) ? flags.call(R) : rf);
+    return '/' + p + '/' + f;
+  }, { unsafe: true });
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/modules/es.string.replace.js":
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es.string.replace.js ***!
@@ -17836,9 +17873,15 @@ window.addEventListener('DOMContentLoaded', function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _checkNumInputs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./checkNumInputs */ "./src/js/modules/checkNumInputs.js");
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _checkNumInputs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./checkNumInputs */ "./src/js/modules/checkNumInputs.js");
+
+
 
 
 
@@ -17849,20 +17892,105 @@ var changeModalState = function changeModalState(state) {
       windowType = document.querySelectorAll('#view_type'),
       windowProfile = document.querySelectorAll('.checkbox'),
       imageParam = document.querySelector('.img_res'),
-      widthParam = document.querySelector('.width_value'),
-      heightParam = document.querySelector('.height_value'),
-      typeParam = document.querySelector('.type_value'),
-      profileParam = document.querySelector('.profile_value');
-  Object(_checkNumInputs__WEBPACK_IMPORTED_MODULE_1__["default"])('#width');
-  Object(_checkNumInputs__WEBPACK_IMPORTED_MODULE_1__["default"])('#height');
+      widthParam = document.querySelector('.num_params_count .width_value'),
+      heightParam = document.querySelector('.num_params_count .height_value'),
+      typeParam = document.querySelector('.num_params_count .type_value'),
+      profileParam = document.querySelector('.num_params_count .profile_value'),
+      priceParam = document.querySelector('.num_params_count .price_value');
+  Object(_checkNumInputs__WEBPACK_IMPORTED_MODULE_3__["default"])('#width');
+  Object(_checkNumInputs__WEBPACK_IMPORTED_MODULE_3__["default"])('#height');
+
+  function countPrice() {
+    var formCoef = 1;
+
+    switch (imageParam.getAttribute("data-type")) {
+      case 1:
+        typeCoef = 1.5;
+        break;
+
+      case 2:
+        typeCoef = 2;
+        break;
+
+      case 3:
+        typeCoef = 1.8;
+        break;
+
+      case 4:
+        typeCoef = 2.3;
+        break;
+
+      default:
+        typeCoef = 1;
+    }
+
+    var profileCoef = 1;
+
+    switch (profileParam.innerHTML) {
+      case 'Деревянное остекление':
+        profileCoef = 1.8;
+        break;
+
+      case 'Алюминиевое остекление':
+        profileCoef = 1.7;
+        break;
+
+      case 'Остекление пластиковыми рамами':
+        profileCoef = 2;
+        break;
+
+      case 'Панорамное остекление':
+        profileCoef = 2.5;
+        break;
+
+      case 'Остекление с выносом':
+        profileCoef = 2.4;
+        break;
+
+      default:
+        profileCoef = 1;
+    }
+
+    var typeCoef = 1;
+
+    switch (typeParam.innerHTML) {
+      case 'Холодное':
+        typeCoef = 1.9;
+        break;
+
+      case 'Теплое':
+        typeCoef = 2;
+        break;
+
+      default:
+        typeCoef = 1;
+    }
+
+    priceParam.innerHTML = Math.ceil(widthParam.innerHTML * heightParam.innerHTML / 1000 * profileCoef * typeCoef * formCoef).toString();
+  }
 
   function bindActionToElems(event, elem, prop) {
+    var defaultProps = {
+      "width": 2300,
+      "height": 1700,
+      "type": "Холодное",
+      "profile": "Деревянное остекление",
+      "form": 1
+    };
+    widthParam.innerHTML = defaultProps.width;
+    heightParam.innerHTML = defaultProps.height;
+    profileParam.innerHTML = defaultProps.profile;
+    typeParam.innerHTML = defaultProps.type;
+    imageParam.setAttribute("src", "assets/img/modal_calc/balkon/type".concat(defaultProps.form, ".png"));
+    imageParam.setAttribute("data-type", defaultProps.form);
+    countPrice();
     elem.forEach(function (item, i) {
       item.addEventListener(event, function () {
         switch (item.nodeName) {
           case 'SPAN':
-            state[prop] = i;
-            imageParam.setAttribute("src", "assets/img/modal_calc/balkon/type".concat(i + 1, ".png"));
+            state[prop] = i + 1;
+            imageParam.setAttribute("src", "assets/img/modal_calc/balkon/type".concat(state[prop], ".png"));
+            imageParam.setAttribute("data-type", state[prop]);
             break;
 
           case 'INPUT':
@@ -17888,6 +18016,8 @@ var changeModalState = function changeModalState(state) {
             profileParam.innerHTML = state[prop];
             break;
         }
+
+        countPrice();
       });
     });
   }

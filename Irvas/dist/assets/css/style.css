@@ -936,6 +936,10 @@ textarea:focus {
   background-color: #ffffff;
 }
 
+.popup_calc_res_content{
+  width: 45rem;
+}
+
 .popup_close,
 .popup_engineer_close,
 .popup_calc_res_close,
@@ -1004,16 +1008,28 @@ textarea:focus {
   width: 100%;
   height: 100%;
 }
-.popup_calc_res .num_params{
+.num_params{
   font-size: 18px;
-  width: 380px;
+  width: 90%;
   margin: 22px auto;
-  border: 1px solid #0089cd;
 }
-.popup_calc_res .num_params .value_param{
+.num_params .value_param{
   font-weight: 700;
   margin-left: 15px;
 }
+
+.divider{
+  height: 1px;
+  background: #0089cd;
+  margin: 20px 0;
+}
+
+.price_value{
+  font-size: 26px;
+  color: #0089cd;
+  font-weight: 700;
+}
+
 .rez_btn{
   margin-bottom: 30px;
 }
